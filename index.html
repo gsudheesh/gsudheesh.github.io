@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudheesh Gangishetty | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" data-content="site.logo">Sudheesh</div>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <main class="site-main">
+    <section id="hero" class="panel hero story-hero">
+      <div class="container hero-story-layout">
+        <div class="hero-story-left">
+          <p class="eyebrow" data-content="hero.eyebrow">PORTFOLIO / DATA / SYSTEMS / ANALYSIS</p>
+
+          <div class="story-sequence" id="story-sequence"></div>
+
+          <div class="hero-buttons hero-buttons-delayed" id="hero-controls">
+            <a href="#reveal" class="btn btn-primary" id="hero-cta">Step into my world</a>
+            <button class="btn btn-secondary replay-btn" id="replay-intro-btn" type="button">
+              ↻ Replay Intro
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-story-right">
+          <div class="hero-photo-frame hero-photo-frame-large" id="hero-photo-frame">
+            <img id="hero-photo" src="profile-photo.jpg" alt="Sudheesh portrait" class="hero-photo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" id="scroll-cue">
+        <span data-content="hero.scrollCue">Scroll to continue</span>
+      </div>
+
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </section>
+
+    <section id="reveal" class="panel reveal-section">
+      <div class="container reveal-grid">
+        <div class="reveal-left reveal-on-scroll">
+          <p class="section-label" data-content="reveal.label">REVEAL</p>
+          <h1 class="reveal-name" data-content="reveal.name">Sudheesh Gangishetty</h1>
+          <p class="reveal-role" data-content="reveal.role">Data | Systems | Analysis</p>
+          <p class="reveal-description" data-content="reveal.description">
+            From messy data to insight, structure, and decision-ready thinking.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary" id="reveal-primary-btn">See the Work</a>
+            <a href="Sudheesh_Resume.docx" class="btn btn-secondary" id="resume-btn" download>Download Resume</a>
+          </div>
+        </div>
+
+        <div class="reveal-right reveal-on-scroll reveal-delay-1">
+          <div class="reveal-card">
+            <p class="reveal-card-label" data-content="reveal.cardLabel">WHAT THIS SITE IS</p>
+            <h3 data-content="reveal.cardTitle">A story of how raw information becomes clear thinking.</h3>
+            <p data-content="reveal.cardText">
+              This portfolio is designed to unfold the way I like working with data:
+              starting with uncertainty, building structure, and ending with clarity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="panel projects">
+      <div class="container projects-container">
+        <div class="projects-heading reveal-on-scroll">
+          <p class="section-label" data-content="projects.label">PROJECTS</p>
+          <h2 data-content="projects.title">What Emerges From the Data</h2>
+          <p class="section-intro centered-intro" data-content="projects.description">
+            A growing body of work built around real data, real systems, and clearer outcomes.
+          </p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="process" class="panel process-section">
+      <div class="container process-layout">
+        <div class="process-left reveal-on-scroll">
+          <p class="section-label" data-content="process.label">PROCESS</p>
+          <h2 data-content="process.title">From Chaos to Clarity</h2>
+          <p class="section-intro" data-content="process.description">
+            The work matters, but the process behind it matters just as much.
+          </p>
+        </div>
+
+        <div class="process-right">
+          <div class="process-steps" id="process-steps"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel about">
+      <div class="container about-grid">
+        <div class="about-image reveal-on-scroll">
+          <div class="about-image-frame">
+            <img id="about-photo" src="profile-photo.jpg" alt="About Sudheesh" class="about-photo" />
+          </div>
+        </div>
+
+        <div class="about-content reveal-on-scroll reveal-delay-1">
+          <p class="section-label" data-content="about.label">ABOUT</p>
+          <h2 data-content="about.title">Who’s Building This</h2>
+          <div id="about-paragraphs"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="current" class="panel current">
+      <div class="container current-layout">
+        <div class="current-left reveal-on-scroll">
+          <p class="section-label" data-content="current.label">CURRENT</p>
+          <h2 data-content="current.title">Still in Motion</h2>
+          <p class="section-intro" data-content="current.description">
+            This is the part of the story that is still being written.
+          </p>
+        </div>
+
+        <div class="current-right reveal-on-scroll reveal-delay-1">
+          <div class="current-showcase">
+            <div class="current-slide-track" id="current-slide-track"></div>
+
+            <div class="current-controls">
+              <button class="current-arrow current-prev" aria-label="Previous slide">←</button>
+              <button class="current-arrow current-next" aria-label="Next slide">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact">
+      <div class="container contact-layout reveal-on-scroll">
+        <p class="section-label" data-content="contact.label">CONTACT</p>
+        <h2 data-content="contact.title">This is only the beginning.</h2>
+        <p class="section-intro centered-intro" data-content="contact.description">
+          If you see potential in it, let’s connect.
+        </p>
+
+        <div class="contact-links" id="contact-links"></div>
+
+        <footer class="footer">
+          <p data-content="site.footer">© 2026 Sudheesh. Built from scratch and still evolving.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg width="64" height="64" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="26" class="bg-circle"></circle>
+      <circle cx="32" cy="32" r="26" class="progress-circle"></circle>
+    </svg>
+    <div class="scroll-indicator-text" id="scroll-indicator-text">0%</div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
