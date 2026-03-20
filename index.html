@@ -4,33 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudheesh Gangishetty | Portfolio</title>
+  <link rel="icon" type="image/png" href="icon_image.png" />
+  <link rel="shortcut icon" href="icon_image.png" />
+  <link rel="apple-touch-icon" href="icon_image.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo" data-content="site.logo">Sudheesh</div>
+    <div class="logo" data-content="site.logo">Sudheesh Gangishetty</div>
     <div class="nav-links" id="nav-links"></div>
   </nav>
 
   <main class="site-main">
     <section id="hero" class="panel hero story-hero">
-      <div class="container hero-story-layout">
-        <div class="hero-story-left">
+      <div class="container hero-story-layout hero-story-layout-single">
+        <div class="hero-story-left hero-story-left-centered">
           <p class="eyebrow" data-content="hero.eyebrow">PORTFOLIO / DATA / SYSTEMS / ANALYSIS</p>
 
           <div class="story-sequence" id="story-sequence"></div>
 
-          <div class="hero-buttons hero-buttons-delayed" id="hero-controls">
+          <div class="hero-buttons hero-buttons-delayed hero-controls-inline" id="hero-controls">
             <a href="#reveal" class="btn btn-primary" id="hero-cta">Step into my world</a>
-            <button class="btn btn-secondary replay-btn" id="replay-intro-btn" type="button">
-              ↻ Replay Intro
+            <button class="replay-icon-btn" id="replay-intro-btn" type="button" aria-label="Replay intro">
+              <span class="replay-symbol">↻</span>
             </button>
-          </div>
-        </div>
-
-        <div class="hero-story-right">
-          <div class="hero-photo-frame hero-photo-frame-large" id="hero-photo-frame">
-            <img id="hero-photo" src="profile-photo.jpg" alt="Sudheesh portrait" class="hero-photo" />
           </div>
         </div>
       </div>
@@ -44,7 +41,7 @@
     </section>
 
     <section id="reveal" class="panel reveal-section">
-      <div class="container reveal-grid">
+      <div class="container reveal-grid reveal-grid-single">
         <div class="reveal-left reveal-on-scroll">
           <p class="section-label" data-content="reveal.label">REVEAL</p>
           <h1 class="reveal-name" data-content="reveal.name">Sudheesh Gangishetty</h1>
@@ -61,11 +58,9 @@
 
         <div class="reveal-right reveal-on-scroll reveal-delay-1">
           <div class="reveal-card">
-            <p class="reveal-card-label" data-content="reveal.cardLabel">WHAT THIS SITE IS</p>
-            <h3 data-content="reveal.cardTitle">A story of how raw information becomes clear thinking.</h3>
+            <h3 data-content="reveal.cardTitle">Someone who transforms raw information into fine insights with clear thinking.</h3>
             <p data-content="reveal.cardText">
-              This portfolio is designed to unfold the way I like working with data:
-              starting with uncertainty, building structure, and ending with clarity.
+              This portfolio is designed to unfold the way I like working with data: starting with uncertainty, building structure, and ending with clarity.
             </p>
           </div>
         </div>
@@ -82,23 +77,7 @@
           </p>
         </div>
 
-        <div class="projects-grid" id="projects-grid"></div>
-      </div>
-    </section>
-
-    <section id="process" class="panel process-section">
-      <div class="container process-layout">
-        <div class="process-left reveal-on-scroll">
-          <p class="section-label" data-content="process.label">PROCESS</p>
-          <h2 data-content="process.title">From Chaos to Clarity</h2>
-          <p class="section-intro" data-content="process.description">
-            The work matters, but the process behind it matters just as much.
-          </p>
-        </div>
-
-        <div class="process-right">
-          <div class="process-steps" id="process-steps"></div>
-        </div>
+        <div class="projects-grid projects-grid-two" id="projects-grid"></div>
       </div>
     </section>
 

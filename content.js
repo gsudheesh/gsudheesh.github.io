@@ -1,14 +1,12 @@
 const CONTENT = {
   site: {
-    logo: "Sudheesh",
+    logo: "Sudheesh Gangishetty",
     footer: "© 2026 Sudheesh. Built from scratch and still evolving."
   },
 
   nav: [
     { label: "Home", href: "#hero" },
-    { label: "Reveal", href: "#reveal" },
     { label: "Projects", href: "#projects" },
-    { label: "Process", href: "#process" },
     { label: "About", href: "#about" },
     { label: "Current", href: "#current" },
     { label: "Contact", href: "#contact" }
@@ -26,18 +24,13 @@ const CONTENT = {
     ],
     lineDuration: 0.9,
     dimFirstLinesAt: 7.2,
-    photoDelayAfterLastLine: 1.0,
-    controlsDelayAfterPhoto: 0.4,
+    controlsDelayAfterLastLine: 0.6,
     button: {
       label: "Step into my world",
       href: "#reveal"
     },
-    replayLabel: "↻ Replay Intro",
-    scrollCue: "Scroll to continue",
-    photo: {
-      src: "profile-photo.jpg",
-      alt: "Sudheesh portrait"
-    }
+    replayLabel: "Replay intro",
+    scrollCue: "Scroll to continue"
   },
 
   reveal: {
@@ -51,12 +44,11 @@ const CONTENT = {
     },
     resumeButton: {
       label: "Download Resume",
-      href: "Sudheesh_Resume.docx"
+      href: "Sudheesh_Resume.pdf"
     },
-    cardLabel: "WHAT THIS SITE IS",
-    cardTitle: "A story of how raw information becomes clear thinking.",
+    cardTitle: "Transforming raw information into fine insights with clear thinking.",
     cardText:
-      "This portfolio is designed to unfold the way I like working with data: starting with uncertainty, building structure, and ending with clarity."
+      "I build practical analysis around structure, clarity, and decisions that people can actually act on."
   },
 
   projects: {
@@ -66,56 +58,20 @@ const CONTENT = {
       "A growing body of work built around real data, real systems, and clearer outcomes.",
     items: [
       {
-        tag: "DATA / ANALYTICS",
-        title: "Project One",
+        tag: "DATA PIPELINE / TABLEAU",
+        title: "Cricket Analytics Pipeline & Performance Insight System",
         description:
-          "A portfolio project focused on transforming raw data into insight through structured analysis, visualisation, and decision-oriented reporting.",
-        github: "https://github.com/gsudheesh",
-        details: "#"
+          "Built an end-to-end cricket analytics workflow that scrapes ball-by-ball data from ESPN Cricinfo, transforms nested JSON into structured datasets, and visualizes performance trends through Tableau dashboards. Processed 50,000+ records to uncover player patterns, scoring phases, and matchup insights for decision-driven analysis.",
+        github: "https://github.com/gsudheesh/cricket-analytics-project",
+        details: "project-cricket.html"
       },
       {
-        tag: "AUTOMATION / SYSTEMS",
-        title: "Project Two",
+        tag: "EXCEL / MARKET ANALYSIS",
+        title: "Amazon Car Electronics Market Analysis",
         description:
-          "A workflow-oriented project designed to handle messy input, automate repetitive steps, and move toward cleaner, analysis-ready data.",
-        github: "https://github.com/gsudheesh",
-        details: "#"
-      },
-      {
-        tag: "VISUALS / STORYTELLING",
-        title: "Project Three",
-        description:
-          "A presentation-focused build that turns structured output into a clearer visual story through dashboards, charts, and communication.",
-        github: "https://github.com/gsudheesh",
-        details: "#"
-      }
-    ]
-  },
-
-  process: {
-    label: "PROCESS",
-    title: "From Chaos to Clarity",
-    description: "The work matters, but the process behind it matters just as much.",
-    steps: [
-      {
-        number: "01",
-        title: "Noise first",
-        description: "Every useful project begins with something incomplete, unclear, or messy."
-      },
-      {
-        number: "02",
-        title: "Structure next",
-        description: "I focus on shaping the data into something consistent, readable, and workable."
-      },
-      {
-        number: "03",
-        title: "Insight after",
-        description: "Once the structure is there, patterns begin to emerge and the analysis gets sharper."
-      },
-      {
-        number: "04",
-        title: "Clarity at the end",
-        description: "The goal is always the same: make complexity easier to understand and act on."
+          "Analyzed Amazon car electronics product data using Excel to evaluate pricing, customer ratings, and review volume. Applied quartile-based segmentation and value score analysis to identify high-performing products, revealing that premium products consistently drive stronger engagement and satisfaction despite lower reliance on discounts.",
+        github: "https://github.com/gsudheesh/amazon-car-electronics-analysis",
+        details: "project-amazon.html"
       }
     ]
   },
@@ -139,19 +95,24 @@ const CONTENT = {
     description: "This is the part of the story that is still being written.",
     items: [
       {
-        title: "Portfolio Development",
+        title: "Progressing in My Data Analyst Career",
         description:
-          "Refining this portfolio into a stronger, more intentional story that shows not just what I’ve built, but how I think."
+          "Actively strengthening the mix of technical analysis, business thinking, and communication needed to move into a full-time data analyst role."
       },
       {
-        title: "Project Completion",
+        title: "Professional Year at Performance Education",
         description:
-          "Finishing and strengthening in-progress projects so they move from promising ideas into recruiter-ready proof of work."
+          "Currently completing my Professional Year to deepen workplace readiness, business communication, and practical understanding of professional environments in Australia."
       },
       {
-        title: "Analytical Growth",
+        title: "Working Toward Azure Certification",
         description:
-          "Building stronger foundations in end-to-end analytics through real workflows involving messy data, structure, interpretation, and presentation."
+          "Building toward an Azure certification to strengthen my foundations in cloud platforms, modern data workflows, and analytics infrastructure."
+      },
+      {
+        title: "Finding New Datasets to Analyze",
+        description:
+          "Continuously looking for new datasets and business questions that let me explore patterns, test ideas, and turn raw information into clear insights."
       }
     ]
   },

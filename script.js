@@ -30,7 +30,6 @@ function buildStoryLines() {
   const container = document.getElementById("story-sequence");
   const heroButton = document.getElementById("hero-cta");
   const replayButton = document.getElementById("replay-intro-btn");
-  const heroPhoto = document.getElementById("hero-photo");
 
   if (!container) return;
 
@@ -52,12 +51,8 @@ function buildStoryLines() {
   }
 
   if (replayButton) {
-    replayButton.textContent = CONTENT.hero.replayLabel;
-  }
-
-  if (heroPhoto) {
-    heroPhoto.src = CONTENT.hero.photo.src;
-    heroPhoto.alt = CONTENT.hero.photo.alt;
+    replayButton.setAttribute("aria-label", CONTENT.hero.replayLabel);
+    replayButton.setAttribute("title", CONTENT.hero.replayLabel);
   }
 }
 
@@ -66,16 +61,14 @@ let dimTimeout;
 function resetIntroAnimations() {
   const lines = document.querySelectorAll(".story-line");
   const earlyLines = document.querySelectorAll('.story-line[data-group="early"]');
-  const photoFrame = document.getElementById("hero-photo-frame");
   const controls = document.getElementById("hero-controls");
   const scrollCue = document.getElementById("scroll-cue");
 
-  const lineDuration = CONTENT.hero.lineDuration || 0.9;
-  const lastLineDelay = Math.max(...CONTENT.hero.lines.map((line) => line.delay));
-  const photoDelay = lastLineDelay + lineDuration + (CONTENT.hero.photoDelayAfterLastLine || 1);
-  const controlsDelay = photoDelay + (CONTENT.hero.controlsDelayAfterPhoto || 0.4);
-  const cueDelay = controlsDelay + 0.4;
   const dimAt = CONTENT.hero.dimFirstLinesAt || 7.2;
+  const lastLineDelay = Math.max(...CONTENT.hero.lines.map((line) => line.delay));
+  const lineDuration = CONTENT.hero.lineDuration || 0.9;
+  const controlsDelay = lastLineDelay + lineDuration + (CONTENT.hero.controlsDelayAfterLastLine || 0.6);
+  const cueDelay = controlsDelay + 0.4;
 
   clearTimeout(dimTimeout);
 
@@ -89,17 +82,6 @@ function resetIntroAnimations() {
     line.style.animationDelay = `${CONTENT.hero.lines[index].delay}s`;
     line.classList.add("animate-in");
   });
-
-  if (photoFrame) {
-    photoFrame.classList.remove("animate-in");
-    photoFrame.style.animation = "none";
-    photoFrame.style.opacity = "0";
-    photoFrame.style.transform = "translateY(18px)";
-    void photoFrame.offsetWidth;
-    photoFrame.style.animation = "";
-    photoFrame.style.animationDelay = `${photoDelay}s`;
-    photoFrame.classList.add("animate-in");
-  }
 
   if (controls) {
     controls.classList.remove("animate-in");
@@ -159,7 +141,7 @@ function buildProjects() {
 
   CONTENT.projects.items.forEach((project, index) => {
     const article = document.createElement("article");
-    article.className = `project-card reveal-on-scroll reveal-delay-${index % 3}`;
+    article.className = `project-card reveal-on-scroll reveal-delay-${index % 2}`;
     article.innerHTML = `
       <p class="project-tag">${project.tag}</p>
       <h3>${project.title}</h3>
@@ -170,26 +152,6 @@ function buildProjects() {
       </div>
     `;
     grid.appendChild(article);
-  });
-}
-
-function buildProcess() {
-  const container = document.getElementById("process-steps");
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  CONTENT.process.steps.forEach((step, index) => {
-    const div = document.createElement("div");
-    div.className = `process-step reveal-on-scroll reveal-delay-${index % 2}`;
-    div.innerHTML = `
-      <span class="step-number">${step.number}</span>
-      <div>
-        <h3>${step.title}</h3>
-        <p>${step.description}</p>
-      </div>
-    `;
-    container.appendChild(div);
   });
 }
 
@@ -424,7 +386,6 @@ function init() {
   buildStoryLines();
   buildRevealButtons();
   buildProjects();
-  buildProcess();
   buildAbout();
   buildCurrent();
   buildContact();
