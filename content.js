@@ -43,10 +43,10 @@ const CONTENT = {
       href: "#projects"
     },
     resumeButton: {
-      label: "Download Resume",
-      href: "Sudheesh_Resume.pdf"
+      label: "View Resume",
+      href: "resume.html"
     },
-    cardTitle: "Transforming raw information into fine insights with clear thinking.",
+    cardTitle: "Someone who transforms raw information into fine insights with clear thinking.",
     cardText:
       "I build practical analysis around structure, clarity, and decisions that people can actually act on."
   },
