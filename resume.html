@@ -28,11 +28,14 @@
           <p class="section-label">RESUME</p>
           <h2>Sudheesh Gangishetty</h2>
           <p class="section-intro centered-intro">
-            View my resume below or download the PDF version.
+            View my resume below, open it in a new tab, or download the PDF version.
           </p>
 
           <div class="resume-actions">
-            <a href="Sudheesh_Resume.pdf" class="btn btn-primary" download>
+            <a href="Sudheesh_Resume.pdf" class="btn btn-primary" target="_blank">
+              Open PDF
+            </a>
+            <a href="Sudheesh_Resume.pdf" class="btn btn-secondary" download>
               Download PDF
             </a>
             <a href="index.html" class="btn btn-secondary">
@@ -41,15 +44,23 @@
           </div>
 
           <div class="resume-frame-wrapper">
-            <iframe
-              src="Sudheesh_Resume.pdf"
+            <object
+              data="Sudheesh_Resume.pdf"
+              type="application/pdf"
               class="resume-frame"
-              title="Sudheesh Resume"
-            ></iframe>
+            >
+              <div class="resume-fallback">
+                <p>Preview not available in this browser.</p>
+                <div class="resume-actions">
+                  <a href="Sudheesh_Resume.pdf" class="btn btn-primary" target="_blank">Open PDF in New Tab</a>
+                  <a href="Sudheesh_Resume.pdf" class="btn btn-secondary" download>Download PDF</a>
+                </div>
+              </div>
+            </object>
           </div>
 
           <p class="resume-note">
-            If the embedded preview doesn’t load on your browser, use the download button above.
+            If the preview doesn’t render properly, open the PDF in a new tab or download it.
           </p>
         </div>
       </div>

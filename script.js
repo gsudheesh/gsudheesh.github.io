@@ -67,7 +67,8 @@ function resetIntroAnimations() {
   const dimAt = CONTENT.hero.dimFirstLinesAt || 7.2;
   const lastLineDelay = Math.max(...CONTENT.hero.lines.map((line) => line.delay));
   const lineDuration = CONTENT.hero.lineDuration || 0.9;
-  const controlsDelay = lastLineDelay + lineDuration + (CONTENT.hero.controlsDelayAfterLastLine || 0.6);
+  const controlsDelay =
+    lastLineDelay + lineDuration + (CONTENT.hero.controlsDelayAfterLastLine || 0.6);
   const cueDelay = controlsDelay + 0.4;
 
   clearTimeout(dimTimeout);
